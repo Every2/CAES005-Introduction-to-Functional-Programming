@@ -5,7 +5,7 @@ Fazer 6 exercícos do Exercism (não contar com o Hello World):
 3 numa linguagem apenas funcional
 
 Para essa tarefa, as linguagens escolhidas foram
-[Haskell](tarefa-2/haskell/) para o requisito de uma lang puramente funcional e [Elixir](tarefa-2/elixir/) para uma lang funcional. Os exercícios incluindo o hello world se encontram nas pastas, mas clicando em seus nomes é possível ser redirecionado diretamente.
+[Haskell](https://github.com/Every2/CAES005-Introduction-to-Functional-Programming/tree/main/tarefa-2/haskell) para o requisito de uma lang puramente funcional e [Elixir](https://github.com/Every2/CAES005-Introduction-to-Functional-Programming/tree/main/tarefa-2/elixir) para uma lang funcional. Os exercícios incluindo o hello world se encontram nas pastas, mas clicando em seus nomes é possível ser redirecionado diretamente.
 
 # Por que essas linguagens?
 

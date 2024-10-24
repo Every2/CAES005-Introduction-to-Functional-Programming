@@ -1,0 +1,141 @@
+Pagina 5:
+C++ não é apenas a linguagem na especificação, mas também suas ferramentas. (Viola os principios) 
+Localizar procurar por: C++ is primarily an industrial language. (Isso parece contraditório)
+O C++ e guiado por 3 principios contraditórios:
+- Fazer a linguagem simples, mas com que fazer o complexo não seja desnecessariamente difícil e coisas complexas não sejam impossíveis. (Tem o efeito contrário)
+- Adicionar features essenciais o mais rapido possível
+- Não quebrar nenhum código. (Isso não acontence bem na realidade)
+[Pagina 6-7]
+Poucas "bibliotecas" em C++ foram adicionadas no inicio já que boa parte das bibliotecas inicialmente eram privadas (exemplo: Game engines terem suas proprias abstrações) e Stroustroup considera isso uma falha no inicio do C++.
+[Pagina 7]
+Coroutines já existiam na linguagem em 89, mas supria apenas as necessidades da Bell Labs, no C++20 elas retornaram e agora funcionam melhor e independente de plataforma.
+Ele descreve que C++ passou por duas grandes longas revisões (11 e 20), mas atualmente o proprio Bjarne disse que "c++23 é uma nova forma de C++".
+[Pagina 8]
+O primeiro "compilador" de C++ que eram apenas macros em C, chamado "Cfront" está com código disponível na documentação do "Computer History Museum's".
+Inicialmente o que hoje chamamos de "construtores" e "destrutores" foram originalmente chamado de "new function" e "delete function".
+Os prototipos de função em C, no caso:
+```c
+int foo(int); //<- Protótipo da função.
+
+int main() {/* ... */}
+int foo(int too) {/* ... */}
+```
+Foram uma ideia inicialmente do Bjarne em C++, mas a ideia foi passada pro C. Inicialmente, era opcional, mas depois se tornou obrigatório. E também se chamavam "function argument checker".
+Outras contribuições do Bjarne:
+- function definition syntax (Por curiosidade, as funções eram definidas de forma diferente e não padronizadas checar "K&R function style")
+- Keyword const
+- // para comentários 
+[Pagina 9]
+RAII só foi possível graças ao avanço do hardware (dito como "computer power"), por consequência o sistema de exceptions também.
+Bjarne nunca disse que "C++ is an object-oriented programming language". O que na verdade ele disse foi:
+C++ is a general-purpose programming language with a bias towards systems program-
+ming that
+• is a better C
+• supports data abstraction
+• supports object-oriented programming
+• supports generic programming
+Apenas isso, não algo padrão como "Everything is an object!".
+[Pagina 10]
+No padrão de 98, é dito que dynamic_cast e typeid foram pensadas em formas simples de "run time reflection" ("Run-time Type Identification" aka RTTI). Apesar disso, não foi uma feature bem recebida e haviam discussões sobre quebrar o principio de "Zero overhead".
+[Pagina 15]
+Por conta dos templates é difícil manter uma ABI estável de C++.
+[Pagina 16]
+Regex em C++ teve inspiração em JS,
+Funcional foi adotado por influência de Scheme
+O operador <=> veio de strcmp de C em varias linguagens como Perl, PHP, Python e Ruby.
+Future e promises de outros dialetos de lisp.
+Await pelo uso em simula.
+[Pagina 17]
+Java e C# pegaram a syntax de C++ e adicionaram o modelo de generics.
+Compile time constants em D fraom inspiradas nas constexpr.
+Destructors, Lifetimes e constructors de C++ foram para Rust
+E as contribuições já ditas com inline (style) e inicializadores no for de C vieram de C++.
+Boa parte das coisas adiconadas vem de conversas com desenvolvedores (apesar de não parecer).
+[Pagina 19-20]
+C++ usa um modelo hibrido que ao mesmo tempo que confia na comunidade para implementação, bibliotecas e etc.. o padrão da linguagem (a especificação) é dada pelo commite.
+Os grupos da ISO se dividem em Working Groups (WG) e Study Groups (SG):
+Core WG (CWG) ś writes the final standards text for the language ś chair, Michael Miller
+(EDG).
+• Library WG (LWG) ś writes the final standards text for the standard library ś chair, Marshall
+Clow (The C++ Alliance, formerly Qualcom).
+• Evolution WG (EWG) ś processes language proposals ś chair, Ville Voutilainen (Qt, formerly
+Symbio).
+• SG1, Concurrency ś concurrency and parallelism topics ś chair, Olivier Giroux (Nvidia).
+• SG5, Transactional Memory ś Exploring transactional memory constructs ś chair, Michael
+Wong (Codeplay, formerly IBM).
+• SG6, Numerics ś including but not limited to fixed point, decimal floating point, and fractions
+ś chair, Lawrence Crowl ("self," formerly Google and Sun).
+• SG7, Compile-time programming ś Initially focused on compile-time reflection, then expanded
+to compile-time programming in general ś chair, Chandler Carruth (Google).
+• SG12, Undefined behavior and Vulnerabilities ś a systematic review of vulnerabilities and
+undefined/unspecified behavior ś chair, Gabriel Dos Reis (Microsoft, formerly Texas A&M
+University).
+• SG13, Human/Machine Interface and I/O ś selected low-level output (e.g., graphics, audio) and
+input (e.g., keyboard, pointing) I/O primitives ś chair, Roger Orr (British Standards (BSI)).
+• SG14, Game Development and Low Latency ś topics of interest to game developers and others
+with low-latency requirements ś chair, Michael Wong (Codeplay, formerly IBM).
+• SG15, Tooling ś topics related to creation of developer tools for standard C++, including but
+not limited to modules and package management ś chair, Titus Winters (Google).
+• SG16, Unicode ś topics related to Unicode text processing in C++ ś chair, Tom Honermann
+(Synopsis).
+• SG19, Machine Learning ś chair, Michael Wong (CodePlay, formerly IBM)
+• SG20, Education ś looking for ways to support learners and teachers approach C++ as it is
+today ś chair, Jan Christiaan van Winkel (Google)
+• SG21, Contracts ś trying to design a contact system after the failure to do so for C++20 (ğ9.6.1)
+ś chair John Spicer (EDG).
+• Library Evolution WG (LEWG) ś processes standard-library proposals ś chair, Titus Winters
+(Google).
+SGs que acabaram:
+• SG2, Modules ś chair, Gabriel Dos Reis (Microsoft, formerly Texas A&M University).
+• SG3, File system ś chair, Beman Dawes ("self").
+• SG8, Concepts ś chair, Andrew Sutton (University of Akron, Ohio, formerly Texas A&M
+University).
+• SG9, Ranges ś updating the STL to use concepts, simplify notation, and provide infinite
+sequences and pipelining ś chair, Eric Niebler (FaceBook).
+[Pagina 23]
+nullptr demorou 3 anos pra ser aceito.
+[Pagina 28]
+Ele acredita que o modelo da ISO com varias pessoas é o que melhor escala a longo prazo (questionável)
+[Pagina 32]
+O modelo de memória de C++ é baseado em "happens-before relations"
+[Pagina 48]
+Bjarne fala sobre as inicializações que são problemáticas e acaba que todo mundo usa o "=" em vez do "{}" que é o correto.
+[Pagina 54]
+Só em 2009 acharam uma syntax conveniente pra lambdas em C++ (Mentira, nunca acharam)
+[Pagina 56]
+A implementação do printf() é type safe em C++.
+[Pagina 58-59]
+A implementação só foi uma extensão dos pars<t, t> do C++98 e foi influenciado por Haskell, ML e Python. (ficou horrível)
+O maior uso delas é em bindings pra Python
+[Pagina 64]
+C++98 pra 11 quebra a abi, mas 11 para 14 não. 
+[Pagina 69]
+Concepts quase se champu "algebraic data types" antes mesmo de haskell com sua feature chamada "type classes".
+[Pagina 75]
+C++ quase teve a clausula where pra concepts.
+[Pagina 81]
+Similar a where, foi adicionado a keyword require em concepts
+[Pagina 91]
+Muitas implementações de exceptions ficaram lentas por lidar com casos gerais que tratam outras coias além de exceptions. e.g MS structured exceptions ou prioritized debugging no GCC (GCC walks the stack twice after a throw to preserve backtraces)
+[Pagina 109]
+Algumas propostas foram tiveram 
+[Pagina 113]
+Um programa de C++ com 70 characters com um #include <iostream> pula para 419,909 já que vem tudo com o header e por isso modulos foram propostos. A performance melhorou mais de 10x com modulos.
+[Pagina 119-20]
+Coroutines em C++ são stackless, ou seja, modelo cooperativo de coroutines.
+[Pagina 122]
+C++ adicionou a função de format que é uma wrapper pra evitar varios << aninhados e usar apenas um (facilita bastante), mas a implementação é um printf-like, mas type safe. 
+[Pagina 123]
+std::span<T> foi adicionado pensando em usar com forEach para evitar problemas e overheads em runtimes. 
+[Pagina 131]
+Comunidade do C++ é fragmentada e acaba se dividindo em nichos ou ambientes.
+[Pagina 137]
+Estão desenvolvendo compile time reflection!
+[Pagin 142]
+Bjarne se mostra do problema de tooling da linguagem.
+
+
+
+
+
+

@@ -110,7 +110,7 @@ defmodule TicTacToe do
     cond do
       Enum.member?(products, 1) -> 1
       Enum.member?(products, 16) -> 2
-      Enum.member?(products, 81) -> 81
+      Enum.member?(products, 81) -> 3
       true -> nil
     end
   end
@@ -125,7 +125,7 @@ defmodule TicTacToe do
     cond do
       Enum.member?(products, 1) -> 1
       Enum.member?(products, 16) -> 2
-      Enum.member?(products, 81) -> 81
+      Enum.member?(products, 81) -> 3
       true -> nil
     end
   end
@@ -150,7 +150,7 @@ defmodule TicTacToe do
     cond do
       Enum.member?(products, 1) -> 1
       Enum.member?(products, 16) -> 2
-      Enum.member?(products, 81) -> 81
+      Enum.member?(products, 81) -> 3
       true -> nil
     end
   end
